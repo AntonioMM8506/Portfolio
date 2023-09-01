@@ -33,7 +33,6 @@ const Posts = ({ posts }) => {
                 </div>
             </section>
         </>
-       
     )
 }//End of index
 

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 
+//Used to pass parameters to the Image component
 const contentfulLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`
 }

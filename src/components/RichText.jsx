@@ -56,7 +56,6 @@ const options = {
                     width={node.data.target.fields.file.details.image.width}
                     alt={node.data.target.fields.title}
                     className='h-20 w-20'
-
                 />
             )
         }
