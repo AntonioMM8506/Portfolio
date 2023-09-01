@@ -5,15 +5,21 @@ import Skeleton from '@/components/ui/Skeleton';
 import { client, previewClient } from '@/lib/contentful/client'
 import { useRouter } from 'next/router';
 
+//The name [slug].jsx, its because its a dynamic name, so this element will have a name according 
+//to the the callback when used. 
 
 const Posts = ({ post, preview }) => {
     const router = useRouter();
     
     return (
         <section className='section'>
+            {/*If we are using the preview mode, then we call the PrevieAlert component*/}
             { preview && <PreviewAlert/>}
             <div className='container'>
                 <article className='prose mx-auto'>
+                    {/*Becausw we are using fallback, in the given case that there's no element that matches
+                    with the query for the post elements, the Skeleton element will be dislayed, otherwise 
+                    the PostHeader and PostBody will be rendered.*/}
                     {router.isFallback ? ( <Skeleton/> ) : 
                     (
                         <>
@@ -71,7 +77,7 @@ export const getStaticPaths = async () => {
         //fallback, in the given case that the user tries to access to an unexistant page
         //when saying that we have a fallback true, it means that the generated route will 
         //be generated on demand and will show a determined component. However, if we 
-        //indicate a false, then, instead of generating that path, it willnot generate anything
+        //indicate a false, then, instead of generating that path, it will not generate anything
         //at all, like a missing page. 
     }
 

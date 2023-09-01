@@ -13,13 +13,13 @@ const Layout = ({children}) => {
                         </Link>
                     </li>
                     <li>
-                        <Link href="/posts" className="text-sm font-medium uppercase text-stone-400">
-                            Posts
+                        <Link href="/contact" className="text-sm font-medium uppercase text-stone-400">
+                            Contact
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="text-sm font-medium uppercase text-stone-400">
-                            Contact
+                        <Link href="/posts" className="text-sm font-medium uppercase text-stone-400">
+                            Blog
                         </Link>
                     </li>
                 </ul>

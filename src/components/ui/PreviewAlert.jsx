@@ -3,6 +3,8 @@ import { Transition } from '@headlessui/react';
 import { XMarkIcon } from '@heroicons/react/20/solid';
 import Link from 'next/link';
 
+//Popup window that is displayed only when the Preview mode is active, so the user can terminate
+//the preview mode and go back to the normal mode.
 const PreviewAlert = () => {
     const [show, setShow] = useState(true);
 
