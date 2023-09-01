@@ -30,7 +30,7 @@ const Layout = ({children}) => {
 
         <footer className="bg-stone-100 text-sm font-medium uppercase text-stone-400">
             <div className="container">
-                <p>Footer</p>
+                <p>Footer Pending</p>
             </div>
         </footer>
         
