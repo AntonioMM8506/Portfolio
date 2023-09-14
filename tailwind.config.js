@@ -15,7 +15,8 @@ module.exports = {
     },
     fontFamily: {
       oswald: ['Oswald'],
-      roboto: ['Roboto']
+      roboto: ['Roboto'],
+      shareTech: ['Share Tech Mono']
     }
   },
   plugins: [require('@tailwindcss/typography')],
