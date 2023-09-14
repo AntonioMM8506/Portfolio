@@ -45,7 +45,7 @@ const Contact = () => {
             { /*<div className="w-full h-scr flex jusify-center items-center"></div>*/ }
 
             <div className="mx-auto max-w-2xl px-4 my-10">
-                <h1 className="text-center text-xl font-semibold">Contact me</h1>
+                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl">Contact me</h1>
                 <form onSubmit={handleSubmit}>
                     <div className="w-full flex flex-col">
                         <label htmlFor="name" className="font-bold text-gray-800">Name</label>
@@ -86,7 +86,7 @@ const Contact = () => {
 
                     <button 
                         type="submit" 
-                        className="px-4 py-2 w-40 bg-gray-700 disabled:bg-gray-400 disabled:text-gray-100 text-white font-medium"
+                        className="px-4 py-2 w-40 bg-gray-700 disabled:bg-gray-400 font-roboto disabled:text-gray-100 text-white font-medium"
                         disabled= {loading}
                     >
                         Send

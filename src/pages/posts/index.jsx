@@ -5,21 +5,23 @@ import PostCard from '@/components/posts/PostCard'
 const Posts = ({ posts }) => {
     return (
         <>
-            <h1 className="text-center text-xl font-semibold">Welcome to my Blog</h1>
-            <br></br>
+            <h1 className="py-2 text-center font-roboto text-blue-700 font-semibold text-3xl">
+                Welcome to my Blog
+            </h1>
             <div className="text-center text-lg">
-                <h2>Here I will post things of my interest, whether a book recommendation, 
+                <h2 className="py-1">
+                    Here I will post things of my interest, whether a book recommendation, 
                     professional development advice, coding excercises and many other things.
                 </h2>
-                <h2>
+                <h2 className="py-1">
                     Thanks for reading.
                 </h2>
-                <h2>
+                <h2 className="py-1">
                     Happy coding!
                 </h2>
             </div>
-
-            <section className = "section">
+            <br></br>
+            <section>
                 <div className = 'container'>
                     {/*with the getStaticProps function, iterates over the retrieved results and then generates
                     the PostCard items with the retrieved data*/}
