@@ -13,6 +13,11 @@ env:
   EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
   EMAIL_PORTFOLIO: ${{ secrets.EMAIL_PORTFOLIO }}
 
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
 jobs:
   build:
 
@@ -26,19 +31,24 @@ jobs:
     
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
     #For using Node.js
     - name: Set up Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-
+    
+    - name: Setup Pages
+      id: pages
+      uses: actions/configure-pages@v1
+      with:
+        static_site_generator: next
     #For caching the dependencies, so the pipeline doesn't take 
     #too long. Only when a  new dependency is added, all the 
     #packages are installed once again.
     - name: Cache dependencies
-      uses: actions/cache@v2
+      uses: actions/cache@v3
       with:
         path: |
           **/node_modules
@@ -64,3 +74,18 @@ jobs:
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
       
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v1
+      with:
+        path: ./out
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1
