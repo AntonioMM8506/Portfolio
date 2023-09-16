@@ -5,6 +5,7 @@ import Image from "next/image";
 import imageLoader from "@/components/ui/ImageLoader";
 import Skills from "@/components/home/Skills";
 import Projects from "@/components/home/Projects";
+import MailSend from "media/pictures/logo/mail-send.png"
 
 export default function Home() {
   
@@ -124,7 +125,7 @@ export default function Home() {
             <Link href="/contact">
               <Image
                 loader={imageLoader}
-                src="media/pictures/logo/mail-send.png"
+                src={MailSend}
                 width="140"
                 height="140"
                 quality="60"
