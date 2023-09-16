@@ -127,6 +127,7 @@ export default function Home() {
                 src="media/pictures/logo/mail-send.png"
                 width="140"
                 height="140"
+                quality="60"
                 alt='Logo'
               />
             </Link>
