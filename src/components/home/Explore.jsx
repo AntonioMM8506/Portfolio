@@ -1,5 +1,4 @@
 import Link from "next/link";
-import ContentfulImage from "../ui/ContentfulImage";
 import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
 
@@ -20,10 +19,12 @@ const Explore = () => {
                 look <a className="underline font-semibold" href="/posts">here </a>
                 </span>
                 <Link href="/posts">
-                <ContentfulImage
-                    src="media/pictures/logo/book.png"
+                <Image
+                    src={`${baseUrl}media/pictures/logo/book.png`}
+                    loader={imageLoader}
                     width="120"
                     height="120"
+                    quality="60"
                     alt='Logo'
                 />
                 </Link>
