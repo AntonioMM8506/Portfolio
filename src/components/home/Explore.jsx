@@ -4,6 +4,8 @@ import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
 
 const Explore = () => {
+    const baseUrl = "https://antoniomm8506.github.io/Portfolio/" || "";
+
     return(
         <>
             {/*Text to redirect to the Blog section*/}
@@ -37,7 +39,7 @@ const Explore = () => {
                 </span>
                 <Link href="/contact">
                 <Image
-                    src=" media/pictures/logo/mail-send.png"
+                    src={`${baseUrl}media/pictures/logo/mail-send.png`}
                     loader={imageLoader}
                     width="140"
                     height="140"
