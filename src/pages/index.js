@@ -2,6 +2,7 @@ import { saveAs } from "file-saver"
 import ContentfulImage from "@/components/ui/ContentfulImage";
 import Link from "next/link";
 import Image from "next/image";
+import imageLoader from "@/components/ui/ImageLoader";
 import Skills from "@/components/home/Skills";
 import Projects from "@/components/home/Projects";
 
@@ -122,6 +123,7 @@ export default function Home() {
             </span>
             <Link href="/contact">
               <Image
+                loader={imageLoader}
                 src="media/pictures/logo/mail-send.png"
                 width="140"
                 height="140"
