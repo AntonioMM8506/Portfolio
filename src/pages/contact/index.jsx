@@ -63,7 +63,7 @@ const Contact = () => {
                         <label htmlFor="email" className="font-bold text-gray-800">Email</label>
                         <input 
                             required
-                            pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$"
+                            //pattern="^[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*@[a-zA-Z0-9]+(?:\.[a-zA-Z0-9]+)*$"
                             type="email" 
                             id="email" 
                             autoComplete="off" 
