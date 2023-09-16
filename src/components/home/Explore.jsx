@@ -37,7 +37,7 @@ const Explore = () => {
                 </span>
                 <Link href="/contact">
                 <Image
-                    src="../../../public/media/pictures/logo/mail-send.png"
+                    src=" media/pictures/logo/mail-send.png"
                     loader={imageLoader}
                     width="140"
                     height="140"
