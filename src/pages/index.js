@@ -1,6 +1,7 @@
 import { saveAs } from "file-saver"
 import ContentfulImage from "@/components/ui/ContentfulImage";
 import Link from "next/link";
+import Image from "next/image";
 import Skills from "@/components/home/Skills";
 import Projects from "@/components/home/Projects";
 
@@ -120,7 +121,7 @@ export default function Home() {
               to know about you. Thank you for reaching out!
             </span>
             <Link href="/contact">
-              <ContentfulImage
+              <Image
                 src="media/pictures/logo/mail-send.png"
                 width="140"
                 height="140"
