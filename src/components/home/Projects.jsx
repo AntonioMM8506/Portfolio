@@ -3,13 +3,10 @@ import Link from "next/link";
 import imageLoader from "../ui/ImageLoader";
 
 const Projects = () => {
-  const baseUrl = process.env.BASE_URL || "";
+  const baseUrl = process.env.NEXT_BASE_URL || "";
 
     return(
         <div>
-          <Link href={process.env.BASE_URL}>
-          Push
-          </Link>
           <div className="container py-4 flex flex-col items-center text-center">
             <h3 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
               Projects
