@@ -3,7 +3,7 @@ import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
 
 const Skills = () => {
-    const baseUrl = process.env.BASE_URL || "";
+    const baseUrl = process.env.EMAIL_PORTFOLIO || "";
 
     const slides = [
         {url: `${baseUrl}media/pictures/carousel/JS.jpg`},

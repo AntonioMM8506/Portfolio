@@ -7,6 +7,7 @@ const AboutMe = () => {
     const saveFile = () => {
         saveAs( "media/files/Resume.pdf", "Resume.pdf");
     };
+    const baseUrl = process.env.EMAIL_USER || "";
 
     return(
         <div>
