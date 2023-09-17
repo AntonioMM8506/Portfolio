@@ -3,7 +3,7 @@ import Link from "next/link";
 import imageLoader from "../ui/ImageLoader";
 
 const Projects = () => {
-  const baseUrl = process.env.BASE_URL|| "";
+  const baseUrl = process.env.BASE_URL;
 
     return(
         <div>
