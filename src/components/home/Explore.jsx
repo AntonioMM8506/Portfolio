@@ -3,7 +3,7 @@ import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
 
 const Explore = () => {
-    const baseUrl = process.env.BASE_URL || "";
+    const baseUrl = "https://antoniomm8506.github.io/Portfolio/"|| "";
 
     return(
         <>
