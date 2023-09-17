@@ -13,7 +13,7 @@ env:
   EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
   EMAIL_PORTFOLIO: ${{ secrets.EMAIL_PORTFOLIO }}
   BASE_URL: ${{ secrets.BASE_URL }}
-  NEXT_BASE_URL: ${{ secrets.NEXT_BASE_URL }}
+  NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
 
 permissions:
   contents: read
