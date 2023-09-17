@@ -1,5 +1,6 @@
 import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
+import { saveAs } from "file-saver"
 
 const AboutMe = () => {
     //Function used to download a document
