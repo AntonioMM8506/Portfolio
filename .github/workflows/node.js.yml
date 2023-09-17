@@ -12,6 +12,7 @@ env:
   EMAIL_USER: ${{ secrets.EMAIL_USER }}
   EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
   EMAIL_PORTFOLIO: ${{ secrets.EMAIL_PORTFOLIO }}
+  BASE_URL: ${{ secrets.BASE_URL }}
 
 permissions:
   contents: read
