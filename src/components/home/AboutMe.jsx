@@ -7,7 +7,8 @@ const AboutMe = () => {
     const saveFile = () => {
         saveAs( "media/files/Resume.pdf", "Resume.pdf");
     };
-    const baseUrl = process.env.EMAIL_USER || "";
+
+    const baseUrl = process.env.BASE_URL || "";
 
     return(
         <div>
@@ -47,7 +48,7 @@ const AboutMe = () => {
             <button className="flex gap-2 w-40 h-11 bg-blue-900 hover:bg-cyan-600 p-1 font-roboto justify-center rounded-md text-white text-2xl" size="medium" onClick={saveFile}>
                 Resume
                 <Image
-                src="media/pictures/logo/download.png"
+                src={`${baseUrl}media/pictures/logo/download.png`}
                 loader={imageLoader}
                 width="32"
                 height="12"
