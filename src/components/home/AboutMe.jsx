@@ -3,12 +3,13 @@ import imageLoader from "../ui/ImageLoader";
 import { saveAs } from "file-saver"
 
 const AboutMe = () => {
+
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
+
     //Function used to download a document
     const saveFile = () => {
-        saveAs( "media/files/Resume.pdf", "Resume.pdf");
+        saveAs( "media/files/Resume.pdf", "AMM_Resume.pdf");
     };
-
-    const baseUrl = process.env.BASE_URL || "";
 
     return(
         <div>
