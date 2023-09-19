@@ -3,6 +3,7 @@ import { useState } from "react";
 import Modal from "../../components/contact/modal";
 
 const Contact = () => {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
     const [loading, setLoading] = useState(false);
     const [modalState, setModalState] = useState(false);
 
@@ -17,7 +18,7 @@ const Contact = () => {
 
         //console.log(data);
 
-        const response = await fetch("/api/contact", {
+        const response = await fetch(`${baseUrl}/api/contact`, {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
@@ -44,6 +45,7 @@ const Contact = () => {
         }
 
     }//End of handleSubmit
+
 
     return(
         <>
