@@ -18,7 +18,7 @@ const Contact = () => {
 
         //console.log(data);
 
-        const response = await fetch(`${baseUrl}/api/contact`, {
+        const response = await fetch(`${baseUrl}api/contact`, {
             method: "POST",
             headers:{
                 "Content-Type": "application/json"
