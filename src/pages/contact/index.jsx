@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Modal from "./modal";
+import Modal from "../../components/contact/modal";
 
 const Contact = () => {
     const [loading, setLoading] = useState(false);
