@@ -37,7 +37,7 @@ export default async function contactAPI(req, res){
             `
         });
 
-        console.log("Message sent:", mail.messageId);
+        //console.log("Message sent:", mail.messageId);
         return res.status(200).json({message: "success"});
 
     } catch(error){ //In the case we receive an error
