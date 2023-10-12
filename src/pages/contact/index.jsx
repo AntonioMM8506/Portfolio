@@ -95,7 +95,8 @@ const Contact = () => {
                         <textarea 
                             required maxLength={500} 
                             rows={4} 
-                            name="message" 
+                            name="message"
+                            autoComplete="off" 
                             placeholder="How can I help you?" 
                             className="w-full p-4 bg-gray-50 border border-gray-100"
                         />
