@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://AntonioMM8506.github.io/Portfolio/",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 1234",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "next build",

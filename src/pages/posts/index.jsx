@@ -41,7 +41,7 @@ const Posts = ({ posts }) => {
 
 //get all the elements of the type post from the contentful server
 export const getStaticProps = async() => {
-    const response = await client.getEntries({ content_type:'post' });
+    const response = await client.getEntries({ content_type:'post' });//
 
     return{
         props: {
