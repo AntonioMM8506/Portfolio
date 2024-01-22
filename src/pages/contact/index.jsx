@@ -56,7 +56,7 @@ const Contact = () => {
                 </h1>
                 <span className="font-roboto py-2 text-lg">
                     Got a question, recommendation or just want to talk? I'd love to hear from you. 
-                    Send me a message and I'll respond as soon as soon as possible. 
+                    Send me a message and I'll respond as soon as possible. 
                 </span>
                 <form onSubmit={handleSubmit}>
                     <div className="w-full flex flex-col py-2">

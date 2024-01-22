@@ -30,6 +30,23 @@ const Explore = () => {
                     </Link>
                 </div>
                 
+                <div className="container py-4 flex flex-col items-center text-center">
+                    <span className="px-2 font-roboto text-lg">
+                        I have been lucky enough to have worked with different customers and for projects of my own interest. 
+                        You can take a peek <a className="underline font-semibold" href="/projects">here</a>. 
+                    </span>
+                    <Link href="/projects">
+                        <Image
+                            src={`${baseUrl}media/pictures/logo/codeblock.png`}
+                            loader={imageLoader}
+                            width="140"
+                            height="140"
+                            quality="60"
+                            alt='Logo'
+                        />
+                    </Link>
+                </div>
+
                 {/*Text to redirect to the Contact section*/}
                 <div className="container py-4 flex flex-col items-center text-center">
                     <span className="px-2 font-roboto text-lg">
@@ -49,6 +66,8 @@ const Explore = () => {
                         />
                     </Link>
                 </div>
+
+
             </div>
         </>
 

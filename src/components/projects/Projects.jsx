@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import imageLoader from "../ui/ImageLoader";
 
-const Projects = () => {
+const MyProjects = () => {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
 
     return(
@@ -12,7 +12,7 @@ const Projects = () => {
               Professional Projects
             </h3>
             <span className="px-2 font-roboto text-lg">
-              I have experience working for a few clients. These are some of them:
+              I have experience working for different clients. These are some of them:
             </span>
           </div>
 
@@ -32,7 +32,7 @@ const Projects = () => {
                   <div className="p-4">
                       <h3 className="text-2xl text-center mb-1 leading-snug">Heladopolis Puebla</h3>
                       <h2 className="text-xl text-center mb-1 leading-snug underline">Commercial Website</h2>
-                      <p className="text-base mb-4 py-2">
+                      <p className="text-base mb-4 py-2 text-center">
                         Website dedicated to demonstrate the variety of products the company can offer.
                         The resources to contact the company are also included.
                       </p>
@@ -56,7 +56,7 @@ const Projects = () => {
                   <div className="p-4">
                       <h3 className="text-xl text-center mb-1 leading-snug">SIMAU México</h3>
                       <h2 className="text-xl text-center mb-1 leading-snug underline">Commercial Website</h2>
-                      <p className="text-base mb-4 py-2">
+                      <p className="text-base mb-4 py-2 text-center">
                         Website dedicated to demonstrate the variety of insdustrial solutions the company can 
                         offer. The resources to contact the company are included. 
                       </p>
@@ -82,7 +82,7 @@ const Projects = () => {
                       <h2 className="text-xl text-center mb-1 leading-snug underline">
                         Adhoc solution for label traceability
                       </h2>
-                      <p className="text-base mb-4 py-2">
+                      <p className="text-base mb-4 py-2 text-center">
                         Web Application designed for shipments traceability and delivery to key customers 
                         like Audi and VW. A database SQL was implemented in order to register all the registers. 
                       </p>
@@ -108,4 +108,4 @@ const Projects = () => {
 
 }
 
-export default Projects;
+export default MyProjects;

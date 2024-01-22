@@ -14,6 +14,11 @@ const Layout = ({children}) => {
                         </Link>
                     </li>
                     <li>
+                        <Link href="/projects" className="flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50 text-xl">
+                            Projects
+                        </Link>
+                    </li>
+                    <li>
                         <Link href="/contact" className="flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50 text-xl">
                             Contact
                         </Link>

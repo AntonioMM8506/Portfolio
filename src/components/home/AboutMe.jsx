@@ -24,7 +24,7 @@ const AboutMe = () => {
             </div>
 
             {/*About me Section*/}
-            <div className="container py-4 flex flex-col items-center text-center">
+            <div className="container py-4 flex flex-col items-center text-center p-20">
                 <h3 className="font-roboto text-blue-700 font-bold text-3xl">
                     About me
                 </h3>
@@ -36,18 +36,27 @@ const AboutMe = () => {
                 <p className="py-2 font-roboto text-lg">
                     My journey in web development began with a love for problem-solving and an 
                     insatiable curiosity for how things work. Over the years, I've honed my skills 
-                    in HTML, CSS, and JavaScript, and I'm proficient in a variety of front-end frameworks 
-                    like React and Next.js. On the server-side, I have knowledge working with technologies such as Node.js 
-                    and Express, integrating databases like MongoDB and SQL to create robust back-end systems.
+                    in <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, and I'm proficient in a variety of front-end frameworks 
+                    like <b>React</b> and <b>Next.js</b>. On the server-side, I have knowledge working with technologies such as <b>Node.js</b> 
+                    and <b>Express</b>, integrating, both, relational and non-relational databases such as <b>SQL</b> and <b>MongoDB</b>. 
+                    Also, I have worked in Agile environments. Tools for organization such as <b>Azure DevOps</b> and for CD/CI 
+                    like <b>GitHub Actions</b> are familiar to me.
                 </p>
             </div>
-
+            <div className="container flex justify-center">
+                <Image
+                    src={`${baseUrl}media/pictures/Various/myself.jpeg`}
+                    loader={imageLoader}
+                    width="200"
+                    height="200"
+                    quality="60"
+                    className='rounded-full m-0'
+                    alt='Myself'
+                />
+            </div>
 
             {/*Button to download CV*/} 
             <div className="container py-4 flex flex-col items-center text-center">
-                <p className="py-2 font-roboto text-xl">
-                    You can give a look to my Resume here:
-                </p>
                 <button className="flex gap-2 w-40 h-11 bg-blue-900 hover:bg-cyan-600 p-1 font-roboto justify-center rounded-md text-white text-2xl" size="medium" onClick={saveFile}>
                     Resume
                     <Image
