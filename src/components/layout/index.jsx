@@ -5,39 +5,21 @@ import ContentfulImage from '../ui/ContentfulImage';
 const Layout = ({children}) => {
     return (<>
 
-        <header className='bg-blue-900 p-8'>
+        <header className='bg-blue-900 p-6'>
             <nav className='container'>
-                <ul className="flex gap-12">
+                <ul className="flex gap-10 text-center justify-center">
                     <li>
-                        <Link href="/" className="flex gap-1 text-sm font-medium font-semibold uppercase text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50">
-                            <ContentfulImage
-                                src="media/pictures/logo/code-block.png"
-                                width="18"
-                                height="6"
-                                alt='Logo'
-                            />
+                        <Link href="/" className="flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50 text-xl">
                             Home
                         </Link>
                     </li>
                     <li>
-                        <Link href="/contact" className="flex gap-1 text-sm font-medium font-semibold uppercase text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50">
-                            <ContentfulImage
-                                src="media/pictures/logo/email.png"
-                                width="18"
-                                height="6"
-                                alt='Logo'
-                            />
+                        <Link href="/contact" className="flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50 text-xl">
                             Contact
                         </Link>
                     </li>
                     <li>
-                        <Link href="/posts" className="flex gap-1 text-sm font-medium font-semibold uppercase text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50">
-                            <ContentfulImage
-                                src="media/pictures/logo/blogger.png"
-                                width="18"
-                                height="6"
-                                alt='Logo'
-                            />
+                        <Link href="/posts" className="flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-4 shadow-lg shadow-blue-500/50 text-xl">
                             Blog
                         </Link>
                     </li>
@@ -46,7 +28,7 @@ const Layout = ({children}) => {
         </header>    
         
         {/*Content of the site*/}
-        <main className="container p-8">{ children }</main>
+        <main className="container p-6">{ children }</main>
 
         <footer className="bg-blue-900 text-sm font-medium text-slate-100 text-center">
             <div className="container items-center py-2">
@@ -76,7 +58,7 @@ const Layout = ({children}) => {
                     </li>
                 </ul>
                 <br></br>
-                <p>&copy; 2023 Antonio Maldonado</p>
+                <p>&copy; 2024 Antonio Maldonado</p>
                 <br></br>
             </div>
         </footer>

@@ -67,7 +67,8 @@ const Contact = () => {
                             required 
                             type="text" 
                             id="name" 
-                            autoComplete="off" 
+                            autoComplete="off"
+                            placeholder="John Doe" 
                             className="p-4 bg-gray-50 border border-gray-100"
                         />
                     </div>
@@ -83,6 +84,7 @@ const Contact = () => {
                             type="email" 
                             id="email" 
                             autoComplete="off" 
+                            placeholder="examples@example.com" 
                             className="p-4 bg-gray-50 border border-gray-100"
                         />
                     </div>
