@@ -1,8 +1,43 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { client } from "@/lib/contentful/client";
 import PostCard from '@/components/posts/PostCard'
 
 const Posts = ({ posts }) => {
+
+    const [isActive, setIsActive] = useState(false);
+    const [allActive, setAllActive] = useState(true);
+    const [bookActive, setBookActive] = useState(false);
+    const [profActive, setProfActive] = useState(false);
+    const [codeActive, setCodeActive] = useState(false);
+
+    const showAll = () =>{
+        setAllActive(true);
+        setBookActive(false);
+        setProfActive(false);
+        setCodeActive(false);
+    }
+
+    const showBooks = () => {
+        setBookActive(true);
+        setAllActive(false);
+    }
+
+    const showProf = () => {
+        setProfActive(true);
+        setAllActive(false);
+    }
+
+    const showCode = () => {
+        setCodeActive(true);
+        setAllActive(false);
+    }
+
+    useEffect( () => {
+        if(bookActive===true && profActive===true && codeActive===true){
+            showAll();
+        }
+    } , [bookActive, profActive, codeActive])
+
     return (
         <>
             <h1 className="py-2 text-center font-roboto text-blue-700 font-semibold text-3xl">
@@ -19,6 +54,44 @@ const Posts = ({ posts }) => {
                 <h2 className="py-1">
                     Happy coding!
                 </h2>
+            </div>
+
+            <div className="flex justify-center text-center gap-6 py-1">
+                <button
+                    className={`${ allActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
+                    onClick={ () => {
+                        showAll();
+                    }}
+                >
+                    Show All
+                </button>
+                    
+                <button
+                    className={`${ bookActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
+                    onClick={ () => {
+                        showBooks();
+                    }}
+                >
+                    Book Recommendation
+                </button>
+                
+                <button
+                    className={`${ profActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
+                    onClick={ () => {
+                        showProf();
+                    }}
+                >
+                    Professional Development
+                </button>
+                
+                <button
+                    className={`${ codeActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
+                    onClick={ () => {
+                        showCode();
+                    }}
+                >
+                    Code Challenges
+                </button>
             </div>
             <br></br>
             <section>
