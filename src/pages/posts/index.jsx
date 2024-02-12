@@ -1,42 +1,66 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 import { client } from "@/lib/contentful/client";
 import PostCard from '@/components/posts/PostCard'
 
+const blogContext = createContext('');
+
 const Posts = ({ posts }) => {
 
-    const [isActive, setIsActive] = useState(false);
     const [allActive, setAllActive] = useState(true);
     const [bookActive, setBookActive] = useState(false);
     const [profActive, setProfActive] = useState(false);
     const [codeActive, setCodeActive] = useState(false);
+    const [displayItems, setDisplayItems] = useState(posts);
+
+    const books = posts.filter((blog) => blog.fields.title.includes('Book Recommendation'));
+    const profDev = posts.filter((blog) => blog.fields.title.includes('Professional Development'));
+    const codeChal = posts.filter((blog) => blog.fields.title.includes('Code Challenge'));
 
     const showAll = () =>{
         setAllActive(true);
         setBookActive(false);
         setProfActive(false);
         setCodeActive(false);
+
+        setDisplayItems(posts)
     }
 
     const showBooks = () => {
         setBookActive(true);
         setAllActive(false);
+        setProfActive(false);
+        setCodeActive(false);
+
+        setDisplayItems(books);
     }
 
     const showProf = () => {
         setProfActive(true);
         setAllActive(false);
+        setBookActive(false);
+        setCodeActive(false);
+
+        setDisplayItems(profDev);
     }
 
     const showCode = () => {
         setCodeActive(true);
         setAllActive(false);
+        setBookActive(false);
+        setProfActive(false);
+
+        setDisplayItems(codeChal);
     }
 
+    //Hooks don't update immediately. They work in an asynchronous way. So, in order to use the updated values
+    //after setting the state, useEffect is the best option, as the second parameters expects an array with all
+    //the variables to take in consideration.
     useEffect( () => {
         if(bookActive===true && profActive===true && codeActive===true){
             showAll();
-        }
-    } , [bookActive, profActive, codeActive])
+        }  
+    }, [bookActive, profActive, codeActive])
+
 
     return (
         <>
@@ -100,7 +124,7 @@ const Posts = ({ posts }) => {
                     the PostCard items with the retrieved data*/}
                     <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10'>
                         {
-                            posts.map((post, i) => (
+                            displayItems.map((post, i) => (
                                 <PostCard key={post.fields.slug} post={post}/>
                             ))
                         }
@@ -113,8 +137,9 @@ const Posts = ({ posts }) => {
 
 
 //get all the elements of the type post from the contentful server
-export const getStaticProps = async() => {
-    const response = await client.getEntries({ content_type:'post' });//
+export const getStaticProps = async( selectAll, selectBook, selectProf, selectCode) => {
+
+    const response = await client.getEntries({ content_type:'post' });
 
     return{
         props: {
