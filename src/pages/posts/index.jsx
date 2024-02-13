@@ -2,8 +2,6 @@ import React, { useState, useEffect, createContext, useContext } from "react";
 import { client } from "@/lib/contentful/client";
 import PostCard from '@/components/posts/PostCard'
 
-const blogContext = createContext('');
-
 const Posts = ({ posts }) => {
 
     const [allActive, setAllActive] = useState(true);
@@ -12,6 +10,7 @@ const Posts = ({ posts }) => {
     const [codeActive, setCodeActive] = useState(false);
     const [displayItems, setDisplayItems] = useState(posts);
 
+    //fetch the elements by category, using the posts parameter
     const books = posts.filter((blog) => blog.fields.title.includes('Book Recommendation'));
     const profDev = posts.filter((blog) => blog.fields.title.includes('Professional Development'));
     const codeChal = posts.filter((blog) => blog.fields.title.includes('Code Challenge'));
@@ -83,36 +82,25 @@ const Posts = ({ posts }) => {
             <div className="flex justify-center text-center gap-6 py-1">
                 <button
                     className={`${ allActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
-                    onClick={ () => {
-                        showAll();
-                    }}
+                    onClick={() => { showAll(); }}
                 >
                     Show All
                 </button>
-                    
                 <button
                     className={`${ bookActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
-                    onClick={ () => {
-                        showBooks();
-                    }}
+                    onClick={() => { showBooks(); }}
                 >
                     Book Recommendation
                 </button>
-                
                 <button
                     className={`${ profActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
-                    onClick={ () => {
-                        showProf();
-                    }}
+                    onClick={() => { showProf(); }}
                 >
                     Professional Development
                 </button>
-                
                 <button
                     className={`${ codeActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
-                    onClick={ () => {
-                        showCode();
-                    }}
+                    onClick={() => { showCode();}}
                 >
                     Code Challenges
                 </button>
@@ -137,10 +125,8 @@ const Posts = ({ posts }) => {
 
 
 //get all the elements of the type post from the contentful server
-export const getStaticProps = async( selectAll, selectBook, selectProf, selectCode) => {
-
+export const getStaticProps = async() => {
     const response = await client.getEntries({ content_type:'post' });
-
     return{
         props: {
             posts: response.items,
