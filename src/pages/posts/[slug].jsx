@@ -17,7 +17,7 @@ const Posts = ({ post, preview }) => {
             { preview && <PreviewAlert/>}
             <div className='container'>
                 <article className='prose mx-auto'>
-                    {/*Becausw we are using fallback, in the given case that there's no element that matches
+                    {/*Because we are using fallback, in the given case that there's no element that matches
                     with the query for the post elements, the Skeleton element will be dislayed, otherwise 
                     the PostHeader and PostBody will be rendered.*/}
                     {router.isFallback ? ( <Skeleton/> ) : 

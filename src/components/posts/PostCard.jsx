@@ -7,7 +7,7 @@ const PostCard = ({post}) => {
     const { title, slug, excerpt, coverImage, author, date } = post.fields;
 
     return(
-        <li className="rounded-md overflow-hidden shadow-md">
+        <li className="rounded-md overflow-hidden gap-2 py-8 shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)]">
             <Link href={`/posts/${slug}`} aria-label={title}>
                 <div className="mb-2 flex justify-center">
                     <ContentfulImage

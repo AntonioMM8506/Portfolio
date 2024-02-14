@@ -79,7 +79,7 @@ const Posts = ({ posts }) => {
                 </h2>
             </div>
 
-            <div className="flex justify-center text-center gap-6 py-1">
+            <div className="flex justify-center text-center gap-2 grid lg:grid-cols-1">
                 <button
                     className={`${ allActive ? "bg-blue-900": "bg-slate-700"} px-2 py-1 w-50 rounded-md  hover:bg-cyan-600 font-roboto text-white text-xl font-medium`}
                     onClick={() => { showAll(); }}

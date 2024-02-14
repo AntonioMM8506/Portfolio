@@ -17,8 +17,8 @@ const MyProjects = () => {
           </div>
 
           {/*Cards--------------------------------------------*/}
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-20'> 
-            <div className="rounded-md overflow-hidden shadow-md">
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-20 py-6'> 
+            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
@@ -42,7 +42,7 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md py-2">
+            <div className="rounded-md overflow-hidden shadow-md py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
@@ -66,7 +66,7 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md">
+            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
