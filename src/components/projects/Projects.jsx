@@ -11,14 +11,16 @@ const MyProjects = () => {
             <h3 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
               Professional Projects
             </h3>
+            <br></br>
             <span className="px-2 font-roboto text-lg">
               I have experience working for different clients. These are some of them:
             </span>
           </div>
 
           {/*Cards--------------------------------------------*/}
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-20 py-6'> 
-            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
+          <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 py-6'> 
+          
+            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
@@ -42,7 +44,7 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
+            <div className="rounded-md overflow-hidden shadow-md py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
@@ -66,7 +68,7 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,0.5)] py-6">
+            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
