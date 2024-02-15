@@ -7,11 +7,13 @@ const Explore = () => {
 
     return(
         <>
-            {/*Text to redirect to the Blog section*/}
+            
             <h3 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
                 Explore
             </h3>
-            <div className="flex">
+            <div className="flex grid lg:grid-cols-3 sm:grid-cols-1">
+
+                {/*Text to redirect to the Blog section*/}
                 <div className="container py-4 flex flex-col items-center text-center">
                     <span className="px-2 font-roboto text-lg">
                         When I'm not coding, you can find me reading, drawing or studying new things, As one of my teachers 
@@ -30,6 +32,7 @@ const Explore = () => {
                     </Link>
                 </div>
                 
+                {/*Text to redirect to the Projects section*/}
                 <div className="container py-4 flex flex-col items-center text-center">
                     <span className="px-2 font-roboto text-lg">
                         I have been lucky enough to have worked with different customers and for projects of my own interest. 

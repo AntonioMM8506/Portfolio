@@ -24,7 +24,7 @@ const AboutMe = () => {
             </div>
 
             {/*About me Section*/}
-            <div className="container py-4 flex flex-col items-center text-center p-20">
+            <div className="container py-4 flex flex-col items-center text-center p-10">
                 <h3 className="font-roboto text-blue-700 font-bold text-3xl">
                     About me
                 </h3>
@@ -71,6 +71,7 @@ const AboutMe = () => {
                     />
                 </button>
             </div>
+            <br></br>
         </div>
     )
 
