@@ -6,9 +6,11 @@ on:
   pull_request:
     branches: [ main ]
 
-  # At 12:00 on every 5th day-of-month from 1 through 31.
+  # At 13:00 on every 5th day-of-month from 1 through 31.
+  # At 01:00 on every 5th day of month from 1 through 31.
   schedule:
     - cron: "0 13 1/5 * *"
+    - cron: "0 1 1/5 * *"
 
 env:
   CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
