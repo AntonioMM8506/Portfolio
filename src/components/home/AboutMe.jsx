@@ -49,8 +49,8 @@ const AboutMe = () => {
                     My journey in web development began with a love for problem-solving and an 
                     insatiable curiosity for how things work. Over the years, I've honed my skills 
                     in <b>HTML</b>, <b>CSS</b>, and <b>JavaScript</b>, and I'm proficient in a variety of front-end frameworks 
-                    like <b>React</b> and <b>Next.js</b>. On the server-side, I have knowledge working with technologies such as <b>Node.js</b> 
-                    and <b>Express</b>, integrating, both, relational and non-relational databases such as <b>SQL</b> and <b>MongoDB</b>. 
+                    like <b>React</b> and <b>Next.js</b>. On the server-side, I have knowledge working with technologies such as <b>Node.js</b> and <b>Express</b>,
+                    integrating, both, relational and non-relational databases such as <b>SQL</b> and <b>MongoDB</b>. 
                     Also, I have worked in Agile environments. Tools for organization such as <b>Azure DevOps</b> and for CD/CI 
                     like <b>GitHub Actions</b> are familiar to me.
                 </p>
