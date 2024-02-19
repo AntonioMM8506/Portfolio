@@ -52,19 +52,21 @@ const Contact = () => {
         <>
             { /*<div className="w-full h-scr flex jusify-center items-center"></div>*/ }
             <div className="mx-auto max-w-2xl px-2 my-2">
-                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl py-2">
-                    Contact me
-                </h1>
-                <div>
+            <div className="flex flex-col items-center py-2">
                                     <Image
                         src={`${baseUrl}media/pictures/Various/write.jpg`}
                         loader={imageLoader}
-                        width="300"
-                        height="300"
+                        width="400"
+                        height="400"
                         quality="60"
                         alt='write'
                     />
                 </div>
+                
+                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl py-2">
+                    Contact me
+                </h1>
+
 
                 <span className="font-roboto py-2 text-lg">
                     Got a question, recommendation or just want to talk? I'd love to hear from you. 
