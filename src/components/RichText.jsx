@@ -3,6 +3,7 @@ import { BLOCKS, INLINES, MARKS} from '@contentful/rich-text-types';
 import Link from 'next/link';
 import ContentfulImage from "./ui/ContentfulImage";
 
+//Modifies the content of every post entry
 const options = {
     renderMark: {
         [MARKS.CODE]: text => {
@@ -52,18 +53,20 @@ const options = {
         },
         [BLOCKS.EMBEDDED_ASSET]: node => {
             return(
-                <ContentfulImage
-                    src={node.data.target.fields.file.url}
-                    height={node.data.target.fields.file.details.image.height}
-                    width={node.data.target.fields.file.details.image.width}
-                    alt={node.data.target.fields.title}
-                    className='h-20 w-20'
-                />
+                <div className="flex flex-col items-center">
+                    <ContentfulImage
+                        src={node.data.target.fields.file.url}
+                        height={node.data.target.fields.file.details.image.height}
+                        width={node.data.target.fields.file.details.image.width}
+                        alt={node.data.target.fields.title}
+                        className='h-100 w-100'
+                    />
+                </div>
             )
         }
     }
 
-};
+};//End of options
 
 const RichText = ({ content }) => {
     //documentToReactComponents, iterates over the whole array of elements found, and returns all the elements so

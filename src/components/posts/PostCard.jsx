@@ -13,8 +13,10 @@ const PostCard = ({post}) => {
                     <ContentfulImage
                         alt={`Cover Image for ${title}`}
                         src={coverImage.fields.file.url}
-                        width={coverImage.fields.file.details.image.width}
-                        height={coverImage.fields.file.details.image.height}
+                        width={500}
+                        height={400}
+                        //width={coverImage.fields.file.details.image.width}
+                        //height={coverImage.fields.file.details.image.height}
                     />
                 </div>
                 <div className="p-4">

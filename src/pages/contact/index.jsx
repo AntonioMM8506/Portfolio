@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import Image from "next/image";
+import imageLoader from "../../components/ui/ImageLoader";
 import Modal from "../../components/contact/modal";
 
 const Contact = () => {
@@ -53,6 +55,17 @@ const Contact = () => {
                 <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl py-2">
                     Contact me
                 </h1>
+                <div>
+                                    <Image
+                        src={`${baseUrl}media/pictures/Various/write.jpg`}
+                        loader={imageLoader}
+                        width="300"
+                        height="300"
+                        quality="60"
+                        alt='write'
+                    />
+                </div>
+
                 <span className="font-roboto py-2 text-lg">
                     Got a question, recommendation or just want to talk? I'd love to hear from you. 
                     Send me a message and I'll respond as soon as possible. 
