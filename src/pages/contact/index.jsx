@@ -49,8 +49,8 @@ const Contact = () => {
     return(
         <>
             { /*<div className="w-full h-scr flex jusify-center items-center"></div>*/ }
-            <div className="mx-auto max-w-2xl px-2 my-10">
-                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
+            <div className="mx-auto max-w-2xl px-2 my-2">
+                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl py-2">
                     Contact me
                 </h1>
                 <span className="font-roboto py-2 text-lg">

@@ -40,7 +40,7 @@ const AboutMe = () => {
                     />
                 </div>
                 <p className="py-2 font-roboto text-lg">
-                    I'm a passionate Fullstack Web Developer with a knack for crafting clean, 
+                    I'm a passionate Fullstack Web Developer with a talent for crafting clean, 
                     efficient, and visually appealing digital solutions. I thrive on turning 
                     creative ideas into functional, user-friendly applications.
                 </p>

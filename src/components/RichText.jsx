@@ -18,9 +18,11 @@ const options = {
         [BLOCKS.PARAGRAPH]: (node, children) => {
             if(node.content.find(item => item.marks?.find(mark => mark.type === "code"))){
                 return(
-                    <div>
+                    <div className="text-justify">
                         <pre>
-                            <code>{children}</code>
+                            <code>
+                                {children}
+                            </code>
                         </pre>
                     </div>
                 )

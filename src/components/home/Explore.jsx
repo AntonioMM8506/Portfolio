@@ -36,8 +36,10 @@ const Explore = () => {
                 <div className="container py-4 flex flex-col items-center text-center">
                     <span className="px-2 font-roboto text-lg">
                         I have been lucky enough to have worked with different customers and for projects of my own interest. 
-                        You can take a peek <a className="underline font-semibold" href="/projects">here</a>. 
+                        You can take a peek <a className="underline font-semibold" href="/projects">here</a>. Each project is 
+                        meticulously crafted to solve real-world problems and push the boundaries of innovation.
                     </span>
+
                     <Link href="/projects">
                         <Image
                             src={`${baseUrl}media/pictures/logo/codeblock.png`}
@@ -48,6 +50,7 @@ const Explore = () => {
                             alt='Logo'
                         />
                     </Link>
+
                 </div>
 
                 {/*Text to redirect to the Contact section*/}
@@ -55,7 +58,7 @@ const Explore = () => {
                     <span className="px-2 font-roboto text-lg">
                         Do you have any questions, want to discuss a project or just want to share some opinion?. You can visit 
                         my <a className="underline font-semibold" href="https://www.linkedin.com/in/antonio-man-mal/">LinkedIn</a> profile 
-                        or you can send me an email <a className="underline font-semibold" href="/posts">here</a>. I will be pleased 
+                        or you can send me an email <a className="underline font-semibold" href="/contact">here</a>. I will be pleased 
                         to know about you. Thank you for reaching out!
                     </span>
                     <Link href="/contact">

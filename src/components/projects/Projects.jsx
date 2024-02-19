@@ -20,7 +20,7 @@ const MyProjects = () => {
           {/*Cards--------------------------------------------*/}
           <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 py-6'> 
           
-            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
+            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
@@ -40,18 +40,18 @@ const MyProjects = () => {
                       </p>
                   </div>
               <Link href="https://heladopolis.com/" target="_blank" className="flex justify-center py-2">
-                <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto text-white font-medium">Go to site</button>
+                <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
+            <div className="rounded-md overflow-hidden py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/SIMAU.jpeg`}
                           loader={imageLoader}
-                          width="200"
-                          height="200"
+                          width="240"
+                          height="240"
                           quality="60"
                       />
                   </div>
@@ -59,16 +59,16 @@ const MyProjects = () => {
                       <h3 className="text-xl text-center mb-1 leading-snug">SIMAU México</h3>
                       <h2 className="text-xl text-center mb-1 leading-snug underline">Commercial Website</h2>
                       <p className="text-base mb-4 py-2 text-center">
-                        Website dedicated to demonstrate the variety of insdustrial solutions the company can 
+                        Website dedicated to demonstrate the insdustrial solutions the company can 
                         offer. The resources to contact the company are included. 
                       </p>
                   </div>
               <Link href="http://simau.com.mx/" target="_blank" className="flex justify-center py-2">
-                <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto text-white font-medium">Go to site</button>
+                <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-md shadow-[0_35px_60px_-15px_rgba(0,0,0,1)] py-10">
+            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
                   <div className="flex justify-center">
                       <Image
                           alt="Picture"
