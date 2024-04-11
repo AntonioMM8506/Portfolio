@@ -97,6 +97,7 @@ jobs:
     steps:
         - name: Deploy to Vercel
           uses: amondnet/vercel-action@v20
-      #- name: Deploy to GitHub Pages
+          with:
+            vercel_token: ${{ secrets.VERCEL_TOKEN }}      #- name: Deploy to GitHub Pages
         #id: deployment
         #uses: actions/deploy-pages@v1
