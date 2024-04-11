@@ -83,10 +83,10 @@ jobs:
         #github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         #repository: ${{ github.repository }}
       
-    - name: Upload artifact
-      uses: actions/upload-pages-artifact@v1
-      with:
-        path: ./out
+    #- name: Upload artifact
+      #uses: actions/upload-pages-artifact@v1
+      #with:
+        #path: ./out
 
     - name: Test 
       run: echo ${{ secrets.VERCEL_TOKEN }}
