@@ -130,26 +130,7 @@ const Posts = ({ posts }) => {
 
 //get all the elements of the type post from the contentful server
 export const getStaticProps = async() => {
-<<<<<<< HEAD
-    const response = await client.getEntries({ content_type:'post' });//
-    
-    /*
-    //console.log(response.items[0].fields.title);
-    //console.log(typeof(response.items))
-    const responseFilter = [];
-    response.items.forEach(element => {
-        //console.log(element.fields.title)
-        if(element.fields.title.includes('Book')){
-            responseFilter.push(element); 
-        } 
-    });
-    console.log(responseFilter);
-    */
-
-
-=======
     const response = await client.getEntries({ content_type:'post' });
->>>>>>> a5c0452d0a8a4d92e7c4b850a02315396ac06852
     return{
         props: {
             posts: response.items, //response.items //responseFilter
