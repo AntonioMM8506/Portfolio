@@ -26,10 +26,11 @@ const Posts = ({ posts }) => {
                     {/*with the getStaticProps function, iterates over the retrieved results and then generates
                     the PostCard items with the retrieved data*/}
                     <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10'>
-                        {
+                        {   
                             posts.map((post, i) => (
                                 <PostCard key={post.fields.slug} post={post}/>
                             ))
+                            
                         }
                     </ul>
                 </div>
@@ -42,10 +43,24 @@ const Posts = ({ posts }) => {
 //get all the elements of the type post from the contentful server
 export const getStaticProps = async() => {
     const response = await client.getEntries({ content_type:'post' });//
+    
+    /*
+    //console.log(response.items[0].fields.title);
+    //console.log(typeof(response.items))
+    const responseFilter = [];
+    response.items.forEach(element => {
+        //console.log(element.fields.title)
+        if(element.fields.title.includes('Book')){
+            responseFilter.push(element); 
+        } 
+    });
+    console.log(responseFilter);
+    */
+
 
     return{
         props: {
-            posts: response.items,
+            posts: response.items, //response.items //responseFilter
             revalidate: 60
         }
     }
