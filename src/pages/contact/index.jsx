@@ -1,5 +1,6 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+import Image from "next/image";
+import imageLoader from "../../components/ui/ImageLoader";
 import Modal from "../../components/contact/modal";
 
 const Contact = () => {
@@ -50,13 +51,26 @@ const Contact = () => {
     return(
         <>
             { /*<div className="w-full h-scr flex jusify-center items-center"></div>*/ }
-            <div className="mx-auto max-w-2xl px-2 my-10">
-                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
+            <div className="mx-auto max-w-2xl px-2 my-2">
+            <div className="flex flex-col items-center py-2">
+                                    <Image
+                        src={`${baseUrl}media/pictures/Various/write.jpg`}
+                        loader={imageLoader}
+                        width="400"
+                        height="400"
+                        quality="60"
+                        alt='write'
+                    />
+                </div>
+                
+                <h1 className="text-center font-roboto text-blue-700 font-semibold text-3xl py-2">
                     Contact me
                 </h1>
+
+
                 <span className="font-roboto py-2 text-lg">
                     Got a question, recommendation or just want to talk? I'd love to hear from you. 
-                    Send me a message and I'll respond as soon as soon as possible. 
+                    Send me a message and I'll respond as soon as possible. 
                 </span>
                 <form onSubmit={handleSubmit}>
                     <div className="w-full flex flex-col py-2">
@@ -67,7 +81,8 @@ const Contact = () => {
                             required 
                             type="text" 
                             id="name" 
-                            autoComplete="off" 
+                            autoComplete="off"
+                            placeholder="John Doe" 
                             className="p-4 bg-gray-50 border border-gray-100"
                         />
                     </div>
@@ -83,6 +98,7 @@ const Contact = () => {
                             type="email" 
                             id="email" 
                             autoComplete="off" 
+                            placeholder="examples@example.com" 
                             className="p-4 bg-gray-50 border border-gray-100"
                         />
                     </div>

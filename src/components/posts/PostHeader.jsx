@@ -13,7 +13,7 @@ const PostHeader = ({ post }) => {
             <DateComponent dateString={date} className='text-sm text-gray-400'/>
         </div>
         
-        <div className='mb-8 md:mb-8 sm:mx-0 flex justify-center'>
+        <div className='mb-8 md:mb-16 sm:mx-0 flex flex-col items-center'>
             <ContentfulImage
                 alt={`Cover Image for ${title}`}
                 src={coverImage.fields.file.url}

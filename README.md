@@ -1,4 +1,10 @@
 # Portfolio
 Personal Portfolio
 
-sa
+https://www.amaldonado.dev/
+
+## Sections
+- Home
+- Projects
+- Contact
+- Blog

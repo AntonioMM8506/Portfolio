@@ -5,6 +5,12 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+  # At 13:00 on every 5th day-of-month from 1 through 31.
+  # At 01:00 on every 5th day of month from 1 through 31.
+  schedule:
+    - cron: "0 1 1/2 * *"
+
 env:
   CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFUL_SPACE_ID }}
   CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFUL_ACCESS_TOKEN }}
@@ -14,6 +20,7 @@ env:
   EMAIL_PORTFOLIO: ${{ secrets.EMAIL_PORTFOLIO }}
   BASE_URL: ${{ secrets.BASE_URL }}
   NEXT_PUBLIC_BASE_URL: ${{ secrets.NEXT_PUBLIC_BASE_URL }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }} 
 
 permissions:
   contents: read
@@ -86,6 +93,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+
     needs: build
     steps:
       - name: Deploy to GitHub Pages
