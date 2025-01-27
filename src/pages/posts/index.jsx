@@ -12,7 +12,8 @@ const Posts = ({ posts }) => {
 
     //fetch the elements by category, using the posts parameter
     const entries = posts.sort((a,b) => Date(a.fields.date) - Date(b.fields.date));
-    console.log(entries)
+    //console.log(entries[0].fields.date)
+    //console.log(entries[0].fields.title);
     const books = posts.filter((blog) => blog.fields.title.includes('Book Recommendation'));
     const profDev = posts.filter((blog) => blog.fields.title.includes('Professional Development'));
     const codeChal = posts.filter((blog) => blog.fields.title.includes('Code Challenge'));

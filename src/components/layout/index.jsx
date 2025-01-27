@@ -1,43 +1,31 @@
 import Link from 'next/link';
 import React, { useState, useRef } from 'react';
 import ContentfulImage from '../ui/ContentfulImage';
-import { useLocation } from 'react-router-dom';
+import CopyEmail from './copyEmail';
 
 const Layout = ({children}) => {
 
     const [homeActive, setHomeActive] = useState(false);
     const [projectsActive, setProjectsActive] = useState(false);
-    const [contactActive, setContactActive] = useState(false);
     const  [blogActive, setBlogActive] = useState(false);
 
     const home = () => {
         setHomeActive(true);
         setProjectsActive(false);
-        setContactActive(false);
         setBlogActive(false);
     }
     
     const projects = () => {
         setHomeActive(false);
         setProjectsActive(true);
-        setContactActive(false);
         setBlogActive(false);
     } 
-
-    const contact = () => {
-        setHomeActive(false);
-        setProjectsActive(false);
-        setContactActive(true);
-        setBlogActive(false);
-    }
 
     const blog = () => {
         setHomeActive(false);
         setProjectsActive(false);
-        setContactActive(false);
         setBlogActive(true);
     }
-    
 
 
     return (<>
@@ -57,13 +45,6 @@ const Layout = ({children}) => {
                         onClick={() => { projects()}}
                         >
                             Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="/contact" className={`${contactActive ? "underline underline-offset-8": "bold"} flex gap-1 text-sm font-medium font-semibold  text-slate-50 hover:underline underline-offset-8 text-xl`}
-                        onClick={() => { contact()}}
-                        >
-                            Contact
                         </Link>
                     </li>
                     <li>
@@ -108,7 +89,11 @@ const Layout = ({children}) => {
                     </li>
                 </ul>
                 <br></br>
-                <p>&copy; 2024 Antonio Maldonado</p>
+
+                <CopyEmail/>
+
+                <br></br>
+                <p>&copy; 2025 Antonio Maldonado</p>
                 <br></br>
             </div>
         </footer>

@@ -1,26 +1,45 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import imageLoader from "../../components/ui/ImageLoader";
-import Modal from "../../components/contact/modal";
+import imageLoader from "../../src/components/ui/ImageLoader";
+import Modal from "../../src/components/contact/modal";
+import axiosInstance from "@/lib/utils/axiosInstance";
 
 const Contact = () => {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
+    //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
+    const baseUrl = "";
     const [loading, setLoading] = useState(false);
     const [modalState, setModalState] = useState(false);
 
     async function handleSubmit(event){
         event.preventDefault();
         setLoading(true);
+
         const data = {
             name: String(event.target.name.value),
             email: String(event.target.email.value),
             message: String(event.target.message.value)
         }
+        
+        try {
+            // Use Axios instance to send a POST request
+            const response = await axiosInstance.post("contact", data);
 
-        //console.log(data);
+            if (response.status === 200) {
+                console.log("Message sent successfully!");
 
+                // Show success modal and reset form fields
+                setModalState(true);
+                event.target.reset();
+            }
+        } catch (error) {
+            console.error("Error sending message:", error.message);
+        } finally {
+            setLoading(false);
+        }
+        /*
         const response = await fetch(`${baseUrl}api/contact`, {
             method: "POST",
+            mode: "no-cors",
             headers:{
                 "Content-Type": "application/json"
             },
@@ -28,7 +47,6 @@ const Contact = () => {
         });
 
         if(response.ok){
-            //console.log("Message send sucesfully");
             //Restore the button so it can be used again
             setLoading(false);
             //set the flag to true so the modal can be displayed
@@ -44,7 +62,7 @@ const Contact = () => {
             setLoading(false);
             //const error = await response.json(); 
         }
-
+        */
     }//End of handleSubmit
 
 

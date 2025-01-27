@@ -3,20 +3,23 @@ import nodemailer from "nodemailer";
 //Configuration for the nodemailer service
 export default async function contactAPI(req, res){
     const { name, email, message } = req.body; //retrive the data from the body POST
-    const user = `${process.env.EMAIL_USER}`;
+    //const user = `${process.env.EMAIL_USER}`;
 
     //Configuration for the transporter, the supplier from the service to send the email
     //any smtp provider will do fine, like mailinator, yopmail, or gmail
     const transporter = nodemailer.createTransport({
-        host: "smtp.gmail.com",
-        port: 465,
-        secure: true,
-        auth:{
-            user: user,
-            pass: `${process.env.EMAIL_PASS}`
+        host: "in-v3.mailjet.com",
+        port: 587,
+        secure: false, // Use STARTTLS
+        auth: {
+            user: `${process.env.EMAIL_USER}`, // Your ProtonMail email address
+            pass: `${process.env.EMAIL_PASS}`  
         }
     });
+    
 
+
+    
     //Try to send a message
     //* from, the mail used for the transporter configuration
     //* to, the target email address, who is going to receive the email
