@@ -3,8 +3,8 @@ import Link from "next/link";
 import ImageWithLoader from "../layout/imageWithLoader";
 
 const MyProjects = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
-  //const baseUrl = "http://localhost:1234/"; //for testing locally
+  const baseUrl = "http://localhost:1234/" || process.env.NEXT_PUBLIC_BASE_URL;
+
 
     return(
         <div>
@@ -19,16 +19,18 @@ const MyProjects = () => {
           </div>
 
           {/*Cards--------------------------------------------*/}
-          <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 py-4 space-y-12 sm:space-y-16 md:space-y-20'> 
+          <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 md:gap-10 py-8 lg:space-y-0 md:space-y-1 sm:space-y-20 space-y-10'> 
           
-            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
+
+            <div className="h-[500px] rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 border">
                   <div className="flex justify-center">
                       <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/HELADOPOLIS.jpg`}
-                          width="125"
-                          height="125"
+                          width="175"
+                          height="175"
                           quality="60"
+                          className="object-cover"
                       />
                   </div>
                   <div className="p-4">
@@ -40,11 +42,12 @@ const MyProjects = () => {
                       </p>
                   </div>
               <Link href="https://heladopolis.com/" target="_blank" className="flex justify-center py-2">
-                <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
+              <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
+
+            <div className="h-[500px] rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 border">
                   <div className="flex justify-center">
                       <ImageWithLoader
                           alt="Picture"
@@ -52,6 +55,7 @@ const MyProjects = () => {
                           width="240"
                           height="240"
                           quality="60"
+                          className="object-cover"
                       />
                   </div>
                   <div className="p-4">
@@ -62,12 +66,14 @@ const MyProjects = () => {
                         offer. The resources to contact the company are included. 
                       </p>
                   </div>
+                  <br></br>
               <Link href="http://simau.com.mx/" target="_blank" className="flex justify-center py-2">
                 <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
+
+                        <div className="h-[500px] rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 border">
                   <div className="flex justify-center">
                       <ImageWithLoader
                           alt="Picture"
@@ -75,10 +81,12 @@ const MyProjects = () => {
                           width="200"
                           height="200"
                           quality="60"
+                          className="object-cover"
                       />
                   </div>
+                  <br></br>
                   <div className="p-4">
-                      <h3 className="text-xl text-center mb-1 leading-snug">Motherson Automotive</h3>
+                      <h3 className="text-2xl text-center mb-1 leading-snug">Samvardhana Motherson Pegurform Automotive</h3>
                       <h2 className="text-xl text-center mb-1 leading-snug underline">
                         Adhoc solution for label traceability
                       </h2>
@@ -88,6 +96,8 @@ const MyProjects = () => {
                       </p>
                   </div>
             </div>
+
+
           </div>
           {/*Cards--------------------------------------------*/}
 
