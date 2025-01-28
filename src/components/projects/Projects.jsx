@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
-import imageLoader from "../ui/ImageLoader";
+import ImageWithLoader from "../layout/imageWithLoader";
 
 const MyProjects = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+  //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+  const baseUrl = "http://localhost:1234/"; //for testing locally
 
     return(
         <div>
@@ -18,14 +19,13 @@ const MyProjects = () => {
           </div>
 
           {/*Cards--------------------------------------------*/}
-          <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 py-6'> 
+          <div className='grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 sm:gap-20 py-4 space-y-12 sm:space-y-16 md:space-y-20'> 
           
-            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
+            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
                   <div className="flex justify-center">
-                      <Image
+                      <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/HELADOPOLIS.jpg`}
-                          loader={imageLoader}
                           width="125"
                           height="125"
                           quality="60"
@@ -44,12 +44,11 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
+            <div className="rounded-md overflow-hidden py-2 shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
                   <div className="flex justify-center">
-                      <Image
+                      <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/SIMAU.jpeg`}
-                          loader={imageLoader}
                           width="240"
                           height="240"
                           quality="60"
@@ -68,12 +67,11 @@ const MyProjects = () => {
               </Link>
             </div>
 
-            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10">
+            <div className="rounded-md overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,1.5)] py-10 mb-4 sm:mb-6 md:mb-8">
                   <div className="flex justify-center">
-                      <Image
+                      <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/MOTHERSON.jpg`}
-                          loader={imageLoader}
                           width="200"
                           height="200"
                           quality="60"
