@@ -1,6 +1,7 @@
 import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
 import { saveAs } from "file-saver"
+import ImageWithLoader from "../layout/imageWithLoader";
 
 const AboutMe = () => {
 
@@ -29,9 +30,8 @@ const AboutMe = () => {
                     About me
                 </h3>
                 <div className="flex-shrink-0 ml-4">
-                    <Image
+                    <ImageWithLoader
                         src={`${baseUrl}media/pictures/Various/myself.jpeg`}
-                        loader={imageLoader}
                         width="200"
                         height="200"
                         quality="60"
@@ -61,9 +61,8 @@ const AboutMe = () => {
             <div className="container py-4 flex flex-col items-center text-center">
                 <button className="flex gap-2 w-40 h-11 bg-blue-900 hover:bg-cyan-600 p-1 font-roboto justify-center rounded-md text-white text-2xl" size="medium" onClick={saveFile}>
                     Resume
-                    <Image
+                    <ImageWithLoader
                         src={`${baseUrl}media/pictures/logo/download.png`}
-                        loader={imageLoader}
                         width="32"
                         height="12"
                         quality="60"

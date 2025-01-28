@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import imageLoader from "../ui/ImageLoader";
+import ImageWithLoader from "../layout/imageWithLoader";
 
 const Explore = () => {
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
@@ -21,9 +22,8 @@ const Explore = () => {
                         look <a className="underline font-semibold" href="/posts">here </a>
                     </span>
                     <Link href="/posts">
-                        <Image
+                        <ImageWithLoader
                             src={`${baseUrl}media/pictures/logo/book.png`}
-                            loader={imageLoader}
                             width="120"
                             height="120"
                             quality="60"
@@ -41,9 +41,8 @@ const Explore = () => {
                     </span>
 
                     <Link href="/projects">
-                        <Image
+                        <ImageWithLoader
                             src={`${baseUrl}media/pictures/logo/codeblock.png`}
-                            loader={imageLoader}
                             width="140"
                             height="140"
                             quality="60"
@@ -64,9 +63,8 @@ const Explore = () => {
                         Thank you for reaching out!
                     </span>
                     <Link href="mailto:amaldonadodev@protonmail.com?subject=Portfolio Contact&body=Hello, Antonio.">
-                        <Image
+                        <ImageWithLoader
                             src={`${baseUrl}media/pictures/logo/mail-send.png`}
-                            loader={imageLoader}
                             width="140"
                             height="140"
                             quality="60"
