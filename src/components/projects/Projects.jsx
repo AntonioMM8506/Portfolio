@@ -3,7 +3,8 @@ import Link from "next/link";
 import ImageWithLoader from "../layout/imageWithLoader";
 
 const MyProjects = () => {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+  
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
   //const baseUrl = "http://localhost:1234/";
 
     return(
