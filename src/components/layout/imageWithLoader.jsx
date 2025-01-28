@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React, { useState } from "react";
+import imageLoader from "../ui/ImageLoader";
 
 const ImageWithLoader = ({ src, alt, className, width, height }) => {
     const [loading, setLoading] = useState(true);
@@ -16,6 +17,7 @@ const ImageWithLoader = ({ src, alt, className, width, height }) => {
             alt={alt}
             width={width}
             height={height}
+            loader={imageLoader}
             className={`${className} ${loading ? "opacity-0" : "opacity-100"} transition-opacity duration-300`}
             onLoadingComplete={() => setLoading(false)}
         />

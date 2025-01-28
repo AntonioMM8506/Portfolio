@@ -32,8 +32,8 @@ const AboutMe = () => {
                 <div className="flex-shrink-0 ml-4">
                     <ImageWithLoader
                         src={`${baseUrl}media/pictures/Various/myself.jpeg`}
-                        width="100"
-                        height="100"
+                        width="200"
+                        height="200"
                         quality="60"
                         className='rounded-full m-0'
                         alt='Myself'
