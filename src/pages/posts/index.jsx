@@ -1,8 +1,12 @@
 import React, { useState, useEffect, createContext, useContext } from "react";
 import { client } from "@/lib/contentful/client";
 import PostCard from '@/components/posts/PostCard'
+import ImageWithLoader from "@/components/layout/imageWithLoader";
 
 const Posts = ({ posts }) => {
+
+    //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
+    const baseUrl = "http://localhost:1234/";
 
     const [allActive, setAllActive] = useState(true);
     const [bookActive, setBookActive] = useState(false);
@@ -64,6 +68,24 @@ const Posts = ({ posts }) => {
     }, [bookActive, profActive, codeActive])
 
 
+    const [currentPage, setCurrentPage] = useState(1);
+    const itemsPerPage = 10;
+    const startIndex = (currentPage - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const totalPages = Math.ceil(displayItems.length / itemsPerPage);
+
+    const handleNextPage = () => {
+        if (currentPage < totalPages) {
+            setCurrentPage((prevPage) => prevPage + 1);
+        }
+    };
+
+    const handlePrevPage = () => {
+        if (currentPage > 1) {
+            setCurrentPage((prevPage) => prevPage - 1);
+        }
+    };
+
     return (
         <>
             <h1 className="py-2 text-center font-roboto text-blue-700 font-semibold text-3xl">
@@ -115,13 +137,41 @@ const Posts = ({ posts }) => {
                     {/*with the getStaticProps function, iterates over the retrieved results and then generates
                     the PostCard items with the retrieved data*/}
                     <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10'>
-                        {
-                            displayItems.map((post, i) => (
-                                <PostCard key={post.fields.slug} post={post}/>
-                            ))
-                            
-                        }
+                    {displayItems.slice(startIndex, endIndex).map((post, i) => (
+                        <PostCard key={post.fields.slug} post={post} />
+                        ))
+                    }
                     </ul>
+                </div>
+
+                <div className="container py-4 flex justify-center items-center text-center">
+                    {currentPage > 1 && (
+                        <button onClick={handlePrevPage} disabled={currentPage === 1}>
+                            <ImageWithLoader
+                                alt="Picture"
+                                src={`${baseUrl}media/pictures/logo/previous.png`}
+                                width="60"
+                                height="60"
+                                quality="60"
+                                className="object-cover"
+                            />
+                        </button>
+                    )}
+                    {currentPage < totalPages && (
+                        <button
+                            onClick={handleNextPage}
+                            disabled={currentPage === Math.ceil(displayItems.length / itemsPerPage)}
+                        >
+                            <ImageWithLoader
+                                alt="Picture"
+                                src={`${baseUrl}media/pictures/logo/next.png`}
+                                width="60"
+                                height="60"
+                                quality="60"
+                                className="object-cover"
+                            />
+                        </button>
+                    )}
                 </div>
             </section>
         </>
