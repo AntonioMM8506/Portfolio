@@ -8,10 +8,12 @@ const useLyticsPageView = () => {
   const router = useRouter();
 
   useEffect(() => {
-    // Function to trigger Lytics page view
     const handleRouteChange = () => {
       if (window.jstag) {
+        console.log('Lytics pageView triggered'); 
         window.jstag.pageView();
+      } else {
+        console.error('jstag is not defined'); 
       }
     };
 
