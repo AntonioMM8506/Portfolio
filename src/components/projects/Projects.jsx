@@ -52,8 +52,8 @@ const MyProjects = () => {
                       <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/SIMAU.jpeg`}
-                          width="180"
-                          height="180"
+                          width="240"
+                          height="240"
                           quality="60"
                           className="object-cover"
                       />
