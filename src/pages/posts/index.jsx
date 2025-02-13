@@ -69,7 +69,7 @@ const Posts = ({ posts }) => {
 
 
     const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 10;
+    const itemsPerPage = 9;
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
     const totalPages = Math.ceil(displayItems.length / itemsPerPage);
@@ -144,6 +144,7 @@ const Posts = ({ posts }) => {
                     </ul>
                 </div>
 
+                <br></br><br></br>  
                 <div className="container py-4 flex justify-center items-center text-center">
                     {currentPage > 1 && (
                         <button onClick={handlePrevPage} disabled={currentPage === 1}>

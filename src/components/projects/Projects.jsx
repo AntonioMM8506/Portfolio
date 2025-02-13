@@ -52,8 +52,8 @@ const MyProjects = () => {
                       <ImageWithLoader
                           alt="Picture"
                           src={`${baseUrl}media/pictures/Various/SIMAU.jpeg`}
-                          width="240"
-                          height="240"
+                          width="180"
+                          height="180"
                           quality="60"
                           className="object-cover"
                       />
@@ -66,7 +66,7 @@ const MyProjects = () => {
                         offer. The resources to contact the company are included. 
                       </p>
                   </div>
-                  <br></br>
+                  
               <Link href="http://simau.com.mx/" target="_blank" className="flex justify-center py-2">
                 <button className="px-4 py-2 w-40 bg-blue-900 rounded-md font-roboto hover:bg-cyan-600 text-white font-medium">Go to site</button>
               </Link>
