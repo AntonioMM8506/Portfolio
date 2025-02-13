@@ -29,7 +29,7 @@ const Layout = ({children}) => {
 
 
     return (<>
-
+        
         <header className='bg-blue-900 p-6'>
             <nav className='container'>
                 <ul className="flex gap-10 text-center justify-center">
