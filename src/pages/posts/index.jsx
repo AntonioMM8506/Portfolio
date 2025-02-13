@@ -5,8 +5,8 @@ import ImageWithLoader from "@/components/layout/imageWithLoader";
 
 const Posts = ({ posts }) => {
 
-    //const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
-    const baseUrl = "http://localhost:1234/";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
+    //const baseUrl = "http://localhost:1234/";
 
     const [allActive, setAllActive] = useState(true);
     const [bookActive, setBookActive] = useState(false);
