@@ -6,5 +6,6 @@ https://www.amaldonado.dev/
 ## Sections
 - Home
 - Projects
-- Contact
 - Blog
+
+Lytics added
