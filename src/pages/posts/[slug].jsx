@@ -5,6 +5,7 @@ import Skeleton from '@/components/ui/Skeleton';
 import { client, previewClient } from '@/lib/contentful/client'
 import { useRouter } from 'next/router';
 
+
 //The name [slug].jsx, its because its a dynamic name, so this element will have a name according 
 //to the the callback when used. 
 
