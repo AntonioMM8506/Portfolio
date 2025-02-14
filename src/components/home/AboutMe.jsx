@@ -1,12 +1,12 @@
-import Image from "next/image";
-import imageLoader from "../ui/ImageLoader";
 import { saveAs } from "file-saver"
 import ImageWithLoader from "../layout/imageWithLoader";
+import { useRouter } from "next/router";
 
 const AboutMe = () => {
 
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
-    //const baseUrl = "http://localhost:1234/"; //for testing locally
+    const router = useRouter();
+    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+    const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
 
     //Function used to download a document
     const saveFile = () => {

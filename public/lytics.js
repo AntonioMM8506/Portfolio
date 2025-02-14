@@ -12,4 +12,9 @@
   });
   
   // You may need to send a page view, depending on your use-case
-  jstag.pageView();
+  jstag.pageView({
+    url: window.location.href,
+    path: window.location.pathname,
+    title: document.title,
+    referrer: document.referrer
+});

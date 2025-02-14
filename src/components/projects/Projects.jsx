@@ -1,13 +1,17 @@
 import Link from "next/link";
 import ImageWithLoader from "../layout/imageWithLoader";
+import PathforaMessage from "@/components/layout/pathforaMessage";
+import { useRouter } from "next/router";
 
 const MyProjects = () => {
 
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
-  //const baseUrl = "http://localhost:1234/";
+  const router = useRouter();
+  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+  const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
 
     return(
         <div>
+          <PathforaMessage/>
           <div className="container py-4 flex flex-col items-center text-center">
             <h3 className="text-center font-roboto text-blue-700 font-semibold text-3xl">
               Professional Projects
