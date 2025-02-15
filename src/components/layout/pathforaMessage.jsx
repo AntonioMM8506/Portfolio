@@ -10,20 +10,20 @@ const PathforaMessage = () => {
 
   const initializePathfora = () => {
     if (!window.pathfora) {
-      console.warn('Pathfora not loaded yet. Retrying...');
+      //console.warn('Pathfora not loaded yet. Retrying...');
       setTimeout(initializePathfora, 500);
       return;
     }
 
     // Ensure this runs only on the /projects page
     if (router.pathname !== targetPage) {
-      console.log('Not on target page, skipping Pathfora initialization.');
+      //console.log('Not on target page, skipping Pathfora initialization.');
       return;
     }
 
     // Check if the widget is already initialized
     if (isWidgetInitialized) {
-      console.log('Widget already initialized. Skipping initialization.');
+      //console.log('Widget already initialized. Skipping initialization.');
       return;
     }
 
@@ -48,7 +48,7 @@ const PathforaMessage = () => {
   const removePathforaWidget = () => {
     const widget = document.getElementById('sample-message-campaign');
     if (widget) {
-      console.log('Removing Pathfora widget...');
+      //console.log('Removing Pathfora widget...');
       widget.remove(); 
       isWidgetInitialized = false; 
     }
