@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 const CopyEmail = () => {
 
-    const baseUrl = "" || "https://localhost:1234/";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
 
     const email = "amaldonadodev@protonmail.com";
 
