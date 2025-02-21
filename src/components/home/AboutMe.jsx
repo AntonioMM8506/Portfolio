@@ -8,7 +8,7 @@ const AboutMe = () => {
     const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
     console.log(currentUrl);
     const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL : "http://localhost:1234/";
-
+    console.log("BASE: ", baseUrl);
 
     //Function used to download a document
     const saveFile = () => {
