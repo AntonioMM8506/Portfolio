@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 const Explore = () => {
     
     const router = useRouter();
-    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+    const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
     const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
 
     return(

@@ -2,11 +2,15 @@ import React, { useState, useEffect, createContext, useContext } from "react";
 import { client } from "@/lib/contentful/client";
 import PostCard from '@/components/posts/PostCard'
 import ImageWithLoader from "@/components/layout/imageWithLoader";
+import { useRouter } from "next/router";
 
 const Posts = ({ posts }) => {
 
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL  || "";
     //const baseUrl = "http://localhost:1234/";
+    const router = useRouter();
+    const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
+    console.log(currentUrl);
 
     const [allActive, setAllActive] = useState(true);
     const [bookActive, setBookActive] = useState(false);

@@ -5,9 +5,10 @@ import { useRouter } from "next/router";
 const CopyEmail = () => {
 
     const router = useRouter();
-    const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+    const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
+    console.log(currentUrl);
     const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
-
+    
     const email = "amaldonadodev@protonmail.com";
 
     // Function to copy email to clipboard
@@ -39,6 +40,7 @@ const CopyEmail = () => {
         <span onClick={copyToClipboard} > {email} </span>
         </div>
     );
-};
+
+};//End of CopyEmail
 
 export default CopyEmail;
