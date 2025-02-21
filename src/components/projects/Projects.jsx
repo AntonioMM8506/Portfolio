@@ -7,9 +7,9 @@ const MyProjects = () => {
 
   const router = useRouter();
   const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
-  console.log(currentUrl);
-  const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
-  console.log(baseUrl);
+  console.log("CURRENT:", currentUrl);
+  const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL || "" : "http://localhost:1234/";
+  console.log("BASE: ", baseUrl);
 
     return(
         <div>
