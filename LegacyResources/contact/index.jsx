@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import imageLoader from "../../src/components/ui/ImageLoader";
-import Modal from "../../src/components/contact/modal";
+import Modal from "./contact/modal";
 import axiosInstance from "@/lib/utils/axiosInstance";
 
 const Contact = () => {

@@ -28,14 +28,12 @@ const CopyEmail = () => {
         <div className="flex gap-4 justify-center">
         <ImageWithLoader 
             src={`${baseUrl}media/pictures/logo/clipboard.png`}
-            alt="Copy email to clipboard"
-            title="Copy email to clipboard"
             onClick={copyToClipboard}
             width="20"
             height="20"
             quality="60"
-            cursor= "pointer"
             className="object-cover"
+            alt="Copy email to clipboard"
         />
         <span onClick={copyToClipboard} > {email} </span>
         </div>
