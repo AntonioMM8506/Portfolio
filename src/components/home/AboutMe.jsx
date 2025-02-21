@@ -4,12 +4,9 @@ import { useRouter } from "next/router";
 
 const AboutMe = () => {
 
-    const router = useRouter();
-    const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
-    console.log("CURRENT:", currentUrl);
-    const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL || "" : "http://localhost:1234/";
-    console.log("BASE: ", baseUrl);
-
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "";
+    //const baseUrl = "https://localhost:1234/"
+    
     //Function used to download a document
     const saveFile = () => {
         saveAs( "media/files/Resume.pdf", "AMM_Resume.pdf");
