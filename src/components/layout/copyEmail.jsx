@@ -4,11 +4,8 @@ import { useRouter } from "next/router";
 
 const CopyEmail = () => {
 
-    const router = useRouter();
-    const currentUrl = typeof(window) != "undefined" ? window.location.href : "";
-    console.log(currentUrl);
-    const baseUrl = currentUrl.toString().includes("amaldonado") ? process.env.NEXT_PUBLIC_BASE_URL  || "" : "http://localhost:1234/";
-    
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "localhost:1234";
+
     const email = "amaldonadodev@protonmail.com";
 
     // Function to copy email to clipboard
